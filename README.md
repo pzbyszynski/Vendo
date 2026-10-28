@@ -31,5 +31,5 @@ Wbudowany moduł płatności elektronicznych pomiędzy kupującym a sprzedający
 # Organizacja współpracy 
 ## Podział zadań:
 (Są w trakcie ustaleń)
-##Kanal komunikacji: Discord / Messenger oraz wbudowany komunikator w serwisie LaboChat.com.   
-##Zasady aktualizacji: Wszystkie kluczowe decyzje architektoniczne i zmiany w zakresie funkcjonalnym są odnotowywane w pliku README.md oraz w przestrzeni zespołu na LaboChat.com. Ogniwem kontroli zmian są pull requesty w repozytorium GitHub.   
+## Kanal komunikacji: Discord / Messenger oraz wbudowany komunikator w serwisie LaboChat.com.   
+## Zasady aktualizacji: Wszystkie kluczowe decyzje architektoniczne i zmiany w zakresie funkcjonalnym są odnotowywane w pliku README.md oraz w przestrzeni zespołu na LaboChat.com. Ogniwem kontroli zmian są pull requesty w repozytorium GitHub.   
