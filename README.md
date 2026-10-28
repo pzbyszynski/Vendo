@@ -1,6 +1,8 @@
 # Vendo (Polski asystent resellingu i zarządzania multi-listingiem)
-# Idea i problem
-Osoby zajmujące się resellingiem oraz wyprzedażą własnej szafy zmagają się z czasochłonnym procesem ręcznego dodawania tych samych produktów na wielu platformach ogłoszeniowych (np. Vinted, OLX, Allegro). Obecnie sprzedawcy muszą wielokrotnie wgrywać te same zdjęcia, pisać opisy od zera i ręcznie ustalać ceny dla każdego serwisu z osobna. Brak centralnego miejsca do zarządzania asortymentem prowadzi do pomyłek, takich jak nieaktualne ogłoszenia czy sprzedaż tego samego przedmiotu w dwóch miejscach jednocześnie. Rozwiązaniem tego problemu jest aplikacja Vendo – mobilny i webowy asystent wspierający proces przygotowania oraz publikacji ofert. Użytkownik robi jedno zdjęcie przedmiotu, skanuje kod kreskowy lub podaje słowo kluczowe, a wbudowany moduł sztucznej inteligencji automatycznie generuje tytuł, opis oraz sugerowaną cenę rynkową. Przedstawiona propozycja ceny służy jako punkt odniesienia, natomiast ostateczna decyzja o kwocie należy zawsze do sprzedającego. Dzięki aplikacji sprzedawca oszczędza czas, eliminując powtarzalną pracę pisarską i edycyjną. Zintegrowane narzędzia pozwalają na sprawne generowanie etykiet wysyłkowych oraz organizowanie odbiorów kurierskich w jednym panelu. Korzystający z Vendo zyskują większą kontrolę nad swoim magazynem, porządek w transakcjach oraz możliwość szybszego skalowania sprzedaży. Ostatecznym rezultatem jest podniesienie efektywności sprzedaży przy jednoczesnym drastycznym zmniejszeniu nakładu pracy potrzebnego na obsługę wielu kanałów jednocześnie.
+Aplikacja, dzięki której użytkownik robi zdjęcie przedmiotu, który chce wystawić na sprzedarz.
+Wystarczy zrobić zdjęcie przedmiotu, zeskanować kod kreskowy lub wpisać słowo kluczowe, a AI wygeneruje tytuł, opis oraz sugerowaną cenę.
+Aplikacja sugeruje użytkownikowi cenę za wystawiany produkt, ale co do ceny - użytkownik wystawia ją ostatecznie samemu.
+Narzędzia do tworzenia etykiet wysyłkowych oraz organizowania odbiorów.
 # Zespół Vendo: 
 Członek 1: Paweł Zbyszyński, nr indeksu: 180651, grupa: IO2 , GitHub: @pzbyszynski   
 Członek 2: Maciej Wojciechowski, nr indeksu: 180647, grupa: IO2, GitHub: @ELLVO3
@@ -13,3 +15,13 @@ Drobni sprzedawcy internetowi, osoby handlujące odzieżą używaną/retro (rese
 3. Użytkownik weryfikuje dane, zmienia cenę na własną (130 PLN) i zatwierdza formularz.   
 4. Przedmiot zostaje zapisany w centralnym magazynie Vendo ze stanem "Gotowy do wystawienia".
 5. Po dokonaniu sprzedaży użytkownik przechodzi do zakładki przesyłek, generuje etykietę wysyłkową PDF i zamawia kuriera po odbiór paczki z domu.
+## Zakres funkcjonalny:
+| ID | Funkcjonalność | Zakres |
+| :--- | :--- | :---: |
+| **F01** | Użytkownik może wykonać zdjęcie przedmiotu, wprowadzić słowo kluczowe lub zeskanować kod kreskowy. | `MVP` |
+| **F02** | Użytkownik może wygenerować za pomocą AI sugerowany tytuł, opis oraz proponowaną cenę przedmiotu. | `MVP` |
+| **F03** | Użytkownik może edytować i zatwierdzić ostateczny tytuł, opis oraz cenę sprzedawanego produktu. | `MVP` |
+| **F04** | Użytkownik może zarządzać bazą swoich produktów (dodawać, edytować, usuwać i zmieniać statusy: Szkic, Wystawiony, Sprzedany). | `MVP` |
+| **F05** | Użytkownik może generować etykiety wysyłkowe dla sprzedanych przedmiotów. | `Rozszerzenie` |
+| **F06** | Użytkownik może planować i organizować odbiór przesyłek przez kuriera. | `Rozszerzenie` |
+| **F07** | Użytkownik może przeglądać podsumowanie i analitykę zysków ze sprzedaży w podziale na platformy. | `Rozszerzenie` |
