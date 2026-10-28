@@ -15,7 +15,7 @@ Drobni sprzedawcy internetowi, osoby handlujące odzieżą używaną/retro (rese
 3. Użytkownik weryfikuje dane, zmienia cenę na własną (130 PLN) i zatwierdza formularz.   
 4. Przedmiot zostaje zapisany w centralnym magazynie Vendo ze stanem "Gotowy do wystawienia".
 5. Po dokonaniu sprzedaży użytkownik przechodzi do zakładki przesyłek, generuje etykietę wysyłkową PDF i zamawia kuriera po odbiór paczki z domu.
-## Zakres funkcjonalny:
+# Zakres funkcjonalny:
 | ID | Funkcjonalność | Zakres |
 | :--- | :--- | :---: |
 | **F01** | Użytkownik może wykonać zdjęcie przedmiotu, wprowadzić słowo kluczowe lub zeskanować kod kreskowy. | `MVP` |
@@ -25,3 +25,6 @@ Drobni sprzedawcy internetowi, osoby handlujące odzieżą używaną/retro (rese
 | **F05** | Użytkownik może generować etykiety wysyłkowe dla sprzedanych przedmiotów. | `Rozszerzenie` |
 | **F06** | Użytkownik może planować i organizować odbiór przesyłek przez kuriera. | `Rozszerzenie` |
 | **F07** | Użytkownik może przeglądać podsumowanie i analitykę zysków ze sprzedaży w podziale na platformy. | `Rozszerzenie` |
+# Poza zakresem pierwszej wersji
+Bezpośrednia, automatyczna integracja przez oficjalne API serwisów Vinted/OLX (ze względu na ograniczenia prawne i brak publicznych interfejsów). 
+Wbudowany moduł płatności elektronicznych pomiędzy kupującym a sprzedającym (aplikacja skupia się na zarządzaniu i logistyce).
