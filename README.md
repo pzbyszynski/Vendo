@@ -28,3 +28,8 @@ Drobni sprzedawcy internetowi, osoby handlujące odzieżą używaną/retro (rese
 # Poza zakresem pierwszej wersji
 Bezpośrednia, automatyczna integracja przez oficjalne API serwisów Vinted/OLX (ze względu na ograniczenia prawne i brak publicznych interfejsów). 
 Wbudowany moduł płatności elektronicznych pomiędzy kupującym a sprzedającym (aplikacja skupia się na zarządzaniu i logistyce).
+# Organizacja współpracy 
+## Podział zadań:
+(Są w trakcie ustaleń)
+##Kanal komunikacji: Discord / Messenger oraz wbudowany komunikator w serwisie LaboChat.com.   
+##Zasady aktualizacji: Wszystkie kluczowe decyzje architektoniczne i zmiany w zakresie funkcjonalnym są odnotowywane w pliku README.md oraz w przestrzeni zespołu na LaboChat.com. Ogniwem kontroli zmian są pull requesty w repozytorium GitHub.   
