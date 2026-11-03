@@ -7,7 +7,7 @@
 * Opis efektu dla użytkownika: W wersji v1 użytkownik może błyskawicznie wprowadzić nowy przedmiot do systemu, uzyskując automatyczne propozycje tytułu, opisu oraz wyceny rynkowej przygotowane przez model AI. Sprzedawca ma możliwość swobodnego dostosowania tych danych, ustalenia ostatecznej ceny i zapisania produktu w centralnym magazynie ze wskazanym statusem. System eliminuję potrzebę ręcznego wymyślania opisów od zera, skracając czas przygotowania oferty do kilkunastu sekund.  
 
 * Funkcje wybrane do MVP (v1): 
- * F01 – Wprowadzanie danych przedmiotu (zdjęcie, słowo kluczowe, kod kreskowy).  
+   * F01 – Wprowadzanie danych przedmiotu (zdjęcie, słowo kluczowe, kod kreskowy).  
  * F02 – AI-Asystent: generowanie sugerowanego tytułu, opisu i ceny.  
  * F03 – Edycja i zatwierdzanie ostatecznych danych produktu przez użytkownika.  
  * F04 – Zarządzanie bazą produktów (dodawanie, edycja, zmiana statusu: Szkic, Aktywny, Sprzedany).  
