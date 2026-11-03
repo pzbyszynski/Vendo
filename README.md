@@ -38,5 +38,5 @@ Wszystkie kluczowe decyzje architektoniczne i zmiany w zakresie funkcjonalnym sÄ
 # OdnoÅ›niki
 ### Repozytorium GitHub:
  https://github.com/pzbyszynski/Vendo
- * **Roadmapa v1:**
-   [Dokumentacja Road Map v1](docs/roadmap-v1.md)
+### Roadmapa v1:
+ [Dokumentacja Road Map v1](docs/roadmap-v1.md)
