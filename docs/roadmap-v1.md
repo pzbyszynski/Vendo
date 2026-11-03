@@ -50,13 +50,22 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
  * Błąd walidacji: "Cena musi być wartością dodatnią wyższą niż 0 PLN."  
  * Sukces: "Zmieniono dane produktu." -> powrót do W01 
 ## Mapa nawigacji i przepływu
-```mermaid
-graph TD
-    W01["W01: Lista produktów"] -->|Kliknięcie "+ Dodaj przedmiot"| W02["W02: Formularz AI"]
-    W02 -->|Przetworzenie przez AI| W03["W03: Edycja i Szczegóły"]
-    
-    W01 -->|Kliknięcie na produkt z listy| W03
-    W03 -->|Zapis zmian / Zmiana statusu| W01
+```text
+## Mapa nawigacji i przepływu
+
+[ W01: Lista produktów ]
+   │
+   ├── (Kliknięcie "+ Dodaj przedmiot") ────> [ W02: Formularz AI ]
+   │                                                 │
+   │                                           (Przetworzenie przez AI)
+   │                                                 │
+   │                                                 ▼
+   └── (Kliknięcie na produkt z listy) ─────> [ W03: Edycja i Szczegóły ]
+                                                     │
+                                           (Zapis zmian / Zmiana statusu)
+                                                     │
+                                                     ▼
+                                            [ W01: Lista produktów ]
 ```
 
 # Tabela Mapy Prac v1
