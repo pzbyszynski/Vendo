@@ -71,9 +71,9 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
 # Tabela Mapy Prac v1
 | Etap v1 | Zadanie | Odpowiedzialny | Zależność | Oczekiwany rezultat |
 | :--- | :--- | :--- | :--- | :--- |
-| **Cel i zakres** | Doprecyzowanie zakresu MVP i podziału ról | Osoba 1 i Osoba 2 | Lab 01 | Zatwierdzony cel v1 i usunięcie zbędnych funkcji z MVP. |
-| **1. Widoki** | Przygotowanie szkiców makiety dla W01, W02, W03 | Osoba 1 i Osoba 2 | Cel i zakres | Pliki graficzne/szkice w folderze `docs/mockups/`. |
-| **2. Struktura Bazy** | Utworzenie skryptu SQL / migracji bazy danych | Osoba 1 i Osoba 2 | Widoki | Działające tabele `Uzytkownik`, `Produkt`, `Zdjecie_Produktu`. |
-| **3. Funkcjonalności** | Implementacja API i serwisu integracji z AI | Osoba 1 i Osoba 2 | Struktura Bazy | Działające wywołanie AI dla opisu i wyceny (F02). |
-| **3. Funkcjonalności** | Budowa widoków frontendowych oraz formularza edycji | Osoba 1 i Osoba 2 | Widoki i Baza | Podpięty interfejs dla W01, W02 i W03 (F01, F03, F04). |
-| **Sprawdzenie** | Testy integracyjne przepływu danych od zdjęcia do zapisu | Osoba 1 i Osoba 2 | Wszystkie etapy | Kompletne, przetestowane MVP v1 bez krytycznych błędów. |
+| **Cel i zakres** | Doprecyzowanie zakresu MVP i podziału ról | Paweł i Maciej | Lab 01 | Zatwierdzony cel v1 i usunięcie zbędnych funkcji z MVP. |
+| **1. Widoki** | Przygotowanie szkiców makiety dla W01, W02, W03 | Paweł i Maciej | Cel i zakres | Pliki graficzne/szkice w folderze `docs/mockups/`. |
+| **2. Struktura Bazy** | Utworzenie skryptu SQL / migracji bazy danych | Paweł i Maciej | Widoki | Działające tabele `Uzytkownik`, `Produkt`, `Zdjecie_Produktu`. |
+| **3. Funkcjonalności** | Implementacja API i serwisu integracji z AI | Paweł i Maciej | Struktura Bazy | Działające wywołanie AI dla opisu i wyceny (F02). |
+| **3. Funkcjonalności** | Budowa widoków frontendowych oraz formularza edycji | Paweł i Maciej| Widoki i Baza | Podpięty interfejs dla W01, W02 i W03 (F01, F03, F04). |
+| **Sprawdzenie** | Testy integracyjne przepływu danych od zdjęcia do zapisu | Paweł i Maciej | Wszystkie etapy | Kompletne, przetestowane MVP v1 bez krytycznych błędów. |
