@@ -68,6 +68,39 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
                                             [ W01: Lista produktów ]
 ```
 
+# Opis Funkcjonalności MVP (v1)
+**F01: Wprowadzanie danych przedmiotu**
+    **Użytkownik:** Zalogowany sprzedawca.
+    **Oczekiwane działanie:** Użytkownik w widoku `W02` załącza plik ze zdjęciem przedmiotu i opcjonalnie uzupełnia pole kodu kreskowego lub słowa kluczowego.
+    **Powiązany widok:** `W02`.
+    **Potrzebne dane:** Plik zdjęcia, `kod_kreskowy`, `slowo_kluczowe`.
+    **Warunek poprawności:** Dodano przynajmniej jeden plik graficzny LUB wpisano wartość w polu kodu/słowa kluczowego.
+    **Sytuacja błędna:** Brak załączonego zdjęcia oraz puste pole tekstowe. System blokuje wysłanie formularza i podświetla wymagane pola na czerwono.
+
+**F02: Generowanie sugerowanych treści i wyceny przez AI**
+    **Użytkownik:** Zalogowany sprzedawca.
+    **Oczekiwane działanie:** System przesyła wprowadzone dane z `W02` do zewnętrznego modelu AI, który generuje proponowany tytuł, wyczerpujący opis oraz sugerowaną cenę rynkową przedmiotu.
+    **Powiązane widoki:** `W02` -> `W03`.
+    **Potrzebne dane:** Zdjęcie/kod/słowo kluczowe z `F01`, odpowiedź z API (zapis do `ai_tytul`, `ai_opis`, `ai_cena`).
+    **Warunek poprawności:** Moduł AI zwraca komplet danych w formacie JSON, a aplikacja przekazuje wygenerowane propozycje do pól formularza edycji w `W03`.
+    **Sytuacja błędna:** Przekroczenie limitu czasu odpowiedzi API (timeout) lub brak możliwości sklasyfikowania zdjęcia przez AI. System wkleja opisy domyślne ("Do uzupełnienia") i informuje użytkownika komunikatem: "Nie udało się wygenerować opisu. Uzupełnij dane ręcznie."
+
+**F03: Edycja i zatwierdzenie finalnych danych produktu**
+    **Użytkownik:** Zalogowany sprzedawca.
+    **Oczekiwane działanie:** W widoku `W03` użytkownik modyfikuje wygenerowany tytuł, opis i ustawia własną cenę ostateczną, a następnie zapisuje produkt.
+    **Powiązany widok:** `W03`.
+    **Potrzebne dane:** `ostateczny_tytul`, `ostateczny_opis`, `ostateczna_cena`, `status`.
+    **Warunek poprawności:** Zapisanie rekordu w tabeli `Produkt` oraz relacyjnych wpisów w `Zdjecie_Produktu`.
+    **Sytuacja błędna:** Użytkownik podaje ujemną cenę lub pozostawia puste pole ostatecznego tytułu. System odrzuca formularz z walidacją błędu.
+
+**F04: Zarządzanie bazą produktów (Magazyn)**
+    **Użytkownik:** Zalogowany sprzedawca.
+    **Oczekiwane działanie:** Przeglądanie listy produktów w W01, filtrowanie ich po statusie oraz zmiana stanu przedmiotu (np. z Aktywny na Sprzedany).
+    **Powiązane widoki:** `W01`, `W03`.
+    **Potrzebne dane:** Rekordy z tabeli `Produkt` powiązane z `kluczem uzytkownik_id`.
+    **Warunek poprawności:** Prawidłowa zmiana pola `status` w bazie danych oraz natychmiastowa zmiana oznaczenia wizualnego na karcie przedmiotu w `W01`.
+    **Sytuacja błędna:** Próba edycji lub usunięcia przedmiotu należącego do innego użytkownika (brak uprawnień) – system zwraca błąd dostępu.
+
 # Tabela Mapy Prac v1
 | Etap v1 | Zadanie | Odpowiedzialny | Zależność | Oczekiwany rezultat |
 | :--- | :--- | :--- | :--- | :--- |
@@ -77,3 +110,17 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
 | **3. Funkcjonalności** | Implementacja API i serwisu integracji z AI | Paweł i Maciej | Struktura Bazy | Działające wywołanie AI dla opisu i wyceny (F02). |
 | **3. Funkcjonalności** | Budowa widoków frontendowych oraz formularza edycji | Paweł i Maciej| Widoki i Baza | Podpięty interfejs dla W01, W02 i W03 (F01, F03, F04). |
 | **Sprawdzenie** | Testy integracyjne przepływu danych od zdjęcia do zapisu | Paweł i Maciej | Wszystkie etapy | Kompletne, przetestowane MVP v1 bez krytycznych błędów. |
+
+# Kierunek kolejnej iteracji – v2
+
+**Pomysł 1: Etykiety wysyłkowe (F05)**
+    **Uzasadnienie:** Po sprzedaniu przedmiotu użytkownik chce szybko wygenerować etykietę kurierską z poziomu aplikacji bez konieczności przechodzenia na strony przewoźników.
+    **Wpływ na Widoki:** W widoku `W03` (oraz na liście w `W01`) przy produktach o statusie Sprzedany pojawi się przycisk `Generuj etykietę PDF`.
+    **Wpływ na Baza danych:** Utworzenie nowej tabeli Przesylka (`id`, `produkt_id`, `kurier`, `numer_nadania`, `etykieta_url`, `status`).
+    **Wpływ na Funkcjonalności:** Integracja z API przewoźnika (np. InPost/DPD API) i pobieranie pliku PDF etykiety.
+
+**Pomysł 2: Organizacja odbioru przesyłek (F06)**
+    **Uzasadnienie:** Umożliwienie zamówienia podjazdu kuriera po paczkę bezpośrednio z domu sprzedawcy.
+    **Wpływ na Widoki:** Dodanie nowego widoku `W04: Zamów kuriera` z wyborem daty i okna godzinowego odbioru paczek.
+    **Wpływ na Baza danych:** Rozbudowa tabeli Przesylka o pola `data_odbioru` oraz `uwagi_dla_kuriera`.
+    **Wpływ na Funkcjonalności:** Wysłanie zlecenia podjazdu kuriera przez API zewnętrznego brokera kurierskiego.
