@@ -8,13 +8,13 @@
 
 * Funkcje wybrane do MVP (v1): 
    * F01 – Wprowadzanie danych przedmiotu (zdjęcie, słowo kluczowe, kod kreskowy).  
- * F02 – AI-Asystent: generowanie sugerowanego tytułu, opisu i ceny.  
- * F03 – Edycja i zatwierdzanie ostatecznych danych produktu przez użytkownika.  
- * F04 – Zarządzanie bazą produktów (dodawanie, edycja, zmiana statusu: Szkic, Aktywny, Sprzedany).  
+   * F02 – AI-Asystent: generowanie sugerowanego tytułu, opisu i ceny.  
+   * F03 – Edycja i zatwierdzanie ostatecznych danych produktu przez użytkownika.  
+   * F04 – Zarządzanie bazą produktów (dodawanie, edycja, zmiana statusu: Szkic, Aktywny, Sprzedany).  
 * Funkcje odłożone do iteracji v2: 
- * F05 – Generowanie etykiet wysyłkowych.  
- * F06 – Zamawianie i organizacja odbiorów kurierskich.  
- * F07 – Analityka zysków ze sprzedaży. 
+   * F05 – Generowanie etykiet wysyłkowych.  
+   * F06 – Zamawianie i organizacja odbiorów kurierskich.  
+   * F07 – Analityka zysków ze sprzedaży. 
 Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2. Projekt widoków, 5. Tabela Mapy Prac v1.
 
 # Projekt widoków (UI / UX)
@@ -31,24 +31,24 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
 * Elementy UI: Nagłówek aplikacji, przycisk nawigacyjny + Dodaj przedmiot, pasek wyszukiwania, filtry statusów (Wszystkie, Szkic, Aktywny, Sprzedany), siatka/lista kart produktów (miniaturka zdjęcia, ostateczny tytuł, cena, badge statusu).  
 * Prezentowane dane: Miniaturka (url_zdjecia), ostateczny_tytul, ostateczna_cena, status.
 * Komunikaty: 
- *Sukces: Wyświetlenie listy załadowanych produktów.  
- *Brak danych: "Brak produktów w magazynie. Kliknij + Dodaj przedmiot, aby stworzyć pierwsze ogłoszenie."  
+   *Sukces: Wyświetlenie listy załadowanych produktów.  
+   *Brak danych: "Brak produktów w magazynie. Kliknij + Dodaj przedmiot, aby stworzyć pierwsze ogłoszenie."  
 ## W02: Formularz AI (Nowy przedmiot) 
 * Odbiorca: Zalogowany użytkownik.  
 * Elementy UI: Przycisk powrotu, sekcja uploadu pliku (zdjęcie), pole tekstowe Kod kreskowy / Słowo kluczowe, przycisk Generuj z AI, wskaźnik ładowania (loading spinner), podgląd sugestii AI.  
 * Dane wprowadzane/wyświetlane:
- * Input: Plik zdjęcia, kod_kreskowy, slowo_kluczowe.  
- * Output: ai_tytul, ai_opis, ai_cena.  
+   * Input: Plik zdjęcia, kod_kreskowy, slowo_kluczowe.  
+   * Output: ai_tytul, ai_opis, ai_cena.  
 * Komunikaty: 
- * Błąd: "Nie udało się przeanalizować zdjęcia. Upewnij się, że plik jest poprawny lub wpisz słowo kluczowe ręcznie."  
- * Sukces: "AI pomyślnie wygenerowało propozycję oferty!" -> automatyczne przejście do edycji w W03.  
+   * Błąd: "Nie udało się przeanalizować zdjęcia. Upewnij się, że plik jest poprawny lub wpisz słowo kluczowe ręcznie."  
+   * Sukces: "AI pomyślnie wygenerowało propozycję oferty!" -> automatyczne przejście do edycji w W03.  
 ## W03: Edycja i Szczegóły przedmiotu 
 * Odbiorca: Zalogowany użytkownik.  
 * Elementy UI: Formularz z polami edycyjnymi (Tytuł, Opis, Cena), rozwijana lista wyboru Status, sekcja zdjęć z oznaczeniem zdjęcia głównego, przycisk Zapisz w magazynie, przycisk Usuń.  
 * Dane wprowadzane/wyświetlane: ostateczny_tytul, ostateczny_opis, ostateczna_cena, status.  
 * Komunikaty: 
- * Błąd walidacji: "Cena musi być wartością dodatnią wyższą niż 0 PLN."  
- * Sukces: "Zmieniono dane produktu." -> powrót do W01 
+   * Błąd walidacji: "Cena musi być wartością dodatnią wyższą niż 0 PLN."  
+   * Sukces: "Zmieniono dane produktu." -> powrót do W01 
 ## Mapa nawigacji i przepływu
 ```text
 ## Mapa nawigacji i przepływu
