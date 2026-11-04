@@ -102,7 +102,7 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
     * Warunek poprawności: Prawidłowa zmiana pola `status` w bazie danych oraz natychmiastowa zmiana oznaczenia wizualnego na karcie przedmiotu w `W01`.
     * Sytuacja błędna: Próba edycji lub usunięcia przedmiotu należącego do innego użytkownika (brak uprawnień) – system zwraca błąd dostępu.
 
-# 5.Tabela Mapy Prac v1
+## 5.Tabela Mapy Prac v1
 | Etap v1 | Zadanie | Odpowiedzialny | Zależność | Oczekiwany rezultat |
 | :--- | :--- | :--- | :--- | :--- |
 | **Cel i zakres** | Doprecyzowanie zakresu MVP i podziału ról | Paweł i Maciej | Lab 01 | Zatwierdzony cel v1 i usunięcie zbędnych funkcji z MVP. |
