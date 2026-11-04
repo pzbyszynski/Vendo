@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendo - Polski Asystent Resellingu v1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Vendo <span>v1 MVP</span></h1>
+            <nav>
+                <a href="{{ url_for('w01_magazyn') }}">W01: Magazyn</a>
+                <a href="{{ url_for('w02_nowy_ai') }}" class="btn-primary">+ W02: Dodaj przez AI</a>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
