@@ -1,1 +1,36 @@
-
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #f4f6f9; color: #333; }
+.container { width: 90%; max-width: 1000px; margin: 0 auto; padding: 20px 0; }
+header { background: #2c3e50; color: white; padding: 10px 0; }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+header h1 { margin: 0; font-size: 24px; }
+header h1 span { font-size: 14px; background: #e74c3c; padding: 3px 8px; border-radius: 4px; }
+nav a { color: white; text-decoration: none; margin-left: 15px; font-weight: bold; }
+.btn-primary { background: #27ae60; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; border: none; cursor: pointer; }
+.btn-secondary { background: #7f8c8d; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; }
+.btn-danger { background: #c0392b; color: white; padding: 8px 16px; border-radius: 4px; border: none; cursor: pointer; }
+.btn-sm { font-size: 12px; background: #2980b9; color: white; padding: 4px 8px; border-radius: 3px; text-decoration: none; }
+.alert { padding: 12px; margin-bottom: 20px; border-radius: 4px; }
+.alert-success { background: #d4edda; color: #155724; }
+.alert-error { background: #f8d7da; color: #721c24; }
+.filter-bar { margin-bottom: 20px; }
+.filter-bar a { padding: 5px 10px; margin-right: 5px; background: #ddd; color: #333; text-decoration: none; border-radius: 3px; }
+.filter-bar a.active { background: #2980b9; color: white; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+.product-card { background: white; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.product-card img { width: 100%; height: 160px; object-fit: cover; }
+.product-info { padding: 15px; }
+.badge { display: inline-block; padding: 2px 6px; font-size: 11px; border-radius: 3px; color: white; }
+.badge-szkic { background: #f39c12; }
+.badge-aktywny { background: #27ae60; }
+.badge-sprzedany { background: #8e44ad; }
+.price { font-weight: bold; font-size: 18px; color: #2c3e50; margin: 10px 0; }
+.form-box { background: white; padding: 25px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+.edit-container { display: flex; gap: 20px; }
+.edit-preview { width: 30%; }
+.edit-preview img { width: 100%; border-radius: 6px; }
+.edit-form { width: 70%; }
+.ai-box { background: #eef9f1; padding: 10px; border-radius: 4px; margin-top: 15px; font-size: 13px; border-left: 4px solid #27ae60; }
+.delete-form { margin-top: 20px; }
