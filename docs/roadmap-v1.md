@@ -1,4 +1,4 @@
-#Plan i Architektura Projektu Vendo – Iteracja v1 (MVP)
+# Plan i Architektura Projektu Vendo – Iteracja v1 (MVP)
 ## 1. Cel i granice wersji v1
 
 * Tytuł projektu: Vendo – Polski asystent resellingu i zarządzania multi-listingiem.  
