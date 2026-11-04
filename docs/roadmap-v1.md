@@ -17,7 +17,7 @@
    * F07 – Analityka zysków ze sprzedaży. 
 Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2. Projekt widoków, 5. Tabela Mapy Prac v1.
 
-# 2. Projekt widoków (UI / UX)
+## 2. Projekt widoków (UI / UX)
 ## Zestawienie widoków v1
 | ID | Nazwa Widoku | Użytkownik | Cel i Przeznaczenie |
 | :--- | :--- | :--- | :--- |
@@ -67,9 +67,9 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
                                                      ▼
                                             [ W01: Lista produktów ]
 ```
-# 3. Struktura Bazy Danych (v1)
+## 3. Struktura Bazy Danych (v1)
 (w trakcie uzupełniania)
-# 4.Opis Funkcjonalności MVP (v1)
+## 4.Opis Funkcjonalności MVP (v1)
 * F01: Wprowadzanie danych przedmiotu
     * Użytkownik: Zalogowany sprzedawca.
     * Oczekiwane działanie: Użytkownik w widoku `W02` załącza plik ze zdjęciem przedmiotu i opcjonalnie uzupełnia pole kodu kreskowego lub słowa kluczowego.
@@ -112,7 +112,7 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
 | **3. Funkcjonalności** | Budowa widoków frontendowych oraz formularza edycji | Paweł i Maciej| Widoki i Baza | Podpięty interfejs dla W01, W02 i W03 (F01, F03, F04). |
 | **Sprawdzenie** | Testy integracyjne przepływu danych od zdjęcia do zapisu | Paweł i Maciej | Wszystkie etapy | Kompletne, przetestowane MVP v1 bez krytycznych błędów. |
 
-# 6.Kierunek kolejnej iteracji – v2
+## 6.Kierunek kolejnej iteracji – v2
 
 * Pomysł 1: Etykiety wysyłkowe (F05)
     * Uzasadnienie: Po sprzedaniu przedmiotu użytkownik chce szybko wygenerować etykietę kurierską z poziomu aplikacji bez konieczności przechodzenia na strony przewoźników.
