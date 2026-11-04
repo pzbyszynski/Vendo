@@ -40,3 +40,22 @@ Wszystkie kluczowe decyzje architektoniczne i zmiany w zakresie funkcjonalnym s�
  https://github.com/pzbyszynski/Vendo
 ### Roadmapa v1:
  [Dokumentacja Road Map v1](docs/roadmap-v1.md)
+## Uruchomienie lokalne aplikacji (Wersja v1)
+
+### 1. Wymagania
+* Python 3.10 lub nowszy[cite: 9].
+
+### 2. Instalacja i start (Windows PowerShell)[cite: 9]
+```powershell
+# 1. Utwórz i aktywuj środowisko wirtualne
+py -3 -m venv .venv
+.\.venv\Scripts\activate
+
+# 2. Zainstaluj wymagane pakiety
+pip install -r requirements.txt
+
+# 3. Zinicjalizuj bazę danych (tworzy użytkownika demo nr 1)
+python init_db.py
+
+# 4. Uruchom serwer aplikacji
+python app.py
