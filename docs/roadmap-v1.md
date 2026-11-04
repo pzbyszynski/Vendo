@@ -18,7 +18,7 @@
 Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2. Projekt widoków, 5. Tabela Mapy Prac v1.
 
 ## 2. Projekt widoków (UI / UX)
-## Zestawienie widoków v1
+### Zestawienie widoków v1
 | ID | Nazwa Widoku | Użytkownik | Cel i Przeznaczenie |
 | :--- | :--- | :--- | :--- |
 | **W01** | Lista produktów (Magazyn) | Sprzedawca | Przeglądanie zapisanych produktów, filtrowanie po statusie (*Szkic*, *Aktywny*, *Sprzedany*) oraz nawigacja do dodawania nowego przedmiotu. |
