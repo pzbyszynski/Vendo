@@ -17,7 +17,7 @@
    * F07 – Analityka zysków ze sprzedaży. 
 Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2. Projekt widoków, 5. Tabela Mapy Prac v1.
 
-# Projekt widoków (UI / UX)
+# 2. Projekt widoków (UI / UX)
 ## Zestawienie widoków v1
 | ID | Nazwa Widoku | Użytkownik | Cel i Przeznaczenie |
 | :--- | :--- | :--- | :--- |
@@ -67,8 +67,9 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
                                                      ▼
                                             [ W01: Lista produktów ]
 ```
-
-# Opis Funkcjonalności MVP (v1)
+# 3. Struktura Bazy Danych (v1)
+(w trakcie uzupełniania)
+# 4.Opis Funkcjonalności MVP (v1)
 * F01: Wprowadzanie danych przedmiotu
     * Użytkownik: Zalogowany sprzedawca.
     * Oczekiwane działanie: Użytkownik w widoku `W02` załącza plik ze zdjęciem przedmiotu i opcjonalnie uzupełnia pole kodu kreskowego lub słowa kluczowego.
@@ -101,7 +102,7 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
     * Warunek poprawności: Prawidłowa zmiana pola `status` w bazie danych oraz natychmiastowa zmiana oznaczenia wizualnego na karcie przedmiotu w `W01`.
     * Sytuacja błędna: Próba edycji lub usunięcia przedmiotu należącego do innego użytkownika (brak uprawnień) – system zwraca błąd dostępu.
 
-# Tabela Mapy Prac v1
+# 5.Tabela Mapy Prac v1
 | Etap v1 | Zadanie | Odpowiedzialny | Zależność | Oczekiwany rezultat |
 | :--- | :--- | :--- | :--- | :--- |
 | **Cel i zakres** | Doprecyzowanie zakresu MVP i podziału ról | Paweł i Maciej | Lab 01 | Zatwierdzony cel v1 i usunięcie zbędnych funkcji z MVP. |
@@ -111,7 +112,7 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
 | **3. Funkcjonalności** | Budowa widoków frontendowych oraz formularza edycji | Paweł i Maciej| Widoki i Baza | Podpięty interfejs dla W01, W02 i W03 (F01, F03, F04). |
 | **Sprawdzenie** | Testy integracyjne przepływu danych od zdjęcia do zapisu | Paweł i Maciej | Wszystkie etapy | Kompletne, przetestowane MVP v1 bez krytycznych błędów. |
 
-# Kierunek kolejnej iteracji – v2
+# 6.Kierunek kolejnej iteracji – v2
 
 * Pomysł 1: Etykiety wysyłkowe (F05)
     * Uzasadnienie: Po sprzedaniu przedmiotu użytkownik chce szybko wygenerować etykietę kurierską z poziomu aplikacji bez konieczności przechodzenia na strony przewoźników.
