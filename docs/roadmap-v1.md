@@ -67,8 +67,37 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
                                                      ▼
                                             [ W01: Lista produktów ]
 ```
-## 3. Struktura Bazy Danych (v1)
-(w trakcie uzupełniania)
+## 3. # Struktura Bazy Danych (v1)
+## Tabela: `Uzytkownik`
+| Nazwa pola | Typ danych | Ograniczenia i wartości domyślne | Klucze / Indeksy | Opis biznesowy i techniczny |
+| :--- | :--- | :--- | :--- | :--- |
+| `id` | INT | NOT NULL, AUTO_INCREMENT | PK | Unikalny identyfikator konta użytkownika w systemie. |
+| `email` | VARCHAR(255) | NOT NULL, UNIQUE | UQ, Indeks unikalny | Adres poczty elektronicznej służący jako unikalny login użytkownika. |
+| `haslo_hash` | VARCHAR(255) | NOT NULL | - | Bezpieczny skrót kryptograficzny hasła dostępowego (np. algorytm bcrypt / Argon2). |
+| `created_at` | TIMESTAMP | NOT NULL, DEFAULT CURRENT_TIMESTAMP | - | Dokładna data i godzina rejestracji konta użytkownika. |
+## Tabela: `Produkt`
+| Nazwa pola | Typ danych | Ograniczenia i wartości domyślne | Klucze / Indeksy | Opis biznesowy i techniczny |
+| :--- | :--- | :--- | :--- | :--- |
+| `id` | INT | NOT NULL, AUTO_INCREMENT | PK | Unikalny identyfikator produktu w systemie. |
+| `uzytkownik_id` | INT | NOT NULL | FK (`Uzytkownik.id`), Indeks | Identyfikator właściciela ogłoszenia; relacja do konta sprzedawcy. |
+| `kod_kreskowy` | TEXT | NULL | Indeks | Zeskanowany kod EAN/kod kreskowy produktu (opcjonalny). |
+| `slowo_kluczowe` | TEXT | NULL | - | Wpisane przez użytkownika słowo kluczowe pomagające w identyfikacji. |
+| `ai_tytul` | TEXT | NULL | - | Tytuł oferty wygenerowany automatycznie przez model AI. |
+| `ai_opis` | TEXT | NULL | - | Szczegółowy opis przedmiotu zaproponowany przez model AI. |
+| `ai_cena` | REAL | NULL, CHECK (`ai_cena` >= 0) | - | Sugerowana cena rynkowa wyliczona przez algorytm. |
+| `ostateczny_tytul` | TEXT | NOT NULL | Indeks | Tytuł oferty zweryfikowany i zatwierdzony przez sprzedawcę. |
+| `ostateczny_opis` | TEXT | NOT NULL | - | Ostateczna treść opisu przedmiotu przygotowana do publikacji. |
+| `ostateczna_cena` | REAL | NOT NULL, CHECK (`ostateczna_cena` >= 0) | - | Rzeczywista cena ustalona przez użytkownika. |
+| `status` | TEXT | NOT NULL, DEFAULT 'Szkic', CHECK (`status` IN ('Szkic', 'Aktywny', 'Sprzedany')) | Indeks | Bieżący etap cyklu życia oferty w magazynie. |
+| `created_at` | TIMESTAMP | NOT NULL, DEFAULT CURRENT_TIMESTAMP | - | Znacznik czasu rejestracji rekordu w bazie danych. |
+## Tabela: `Zdjecie_Produktu`
+| Nazwa pola | Typ danych | Ograniczenia i wartości domyślne | Klucze / Indeksy | Opis biznesowy i techniczny |
+| :--- | :--- | :--- | :--- | :--- |
+| `id` | INT | NOT NULL, AUTO_INCREMENT | PK | Unikalny identyfikator pliku zdjęcia w bazie. |
+| `produkt_id` | INT | NOT NULL | FK (`Produkt.id`), Indeks | Identyfikator produktu, do którego przypisana jest fotografia (kaskadowe usuwanie). |
+| `url_zdjecia` | TEXT | NOT NULL | - | Ścieżka dostępu lub bezpośredni adres URL do pliku w magazynie chmurowym / na serwerze. |
+| `czy_glowne` | BOOLEAN | NOT NULL, DEFAULT FALSE | - | Flaga logiczna wskazująca zdjęcie reprezentatywne (miniaturkę na liście ofert). |
+
 ## 4.Opis Funkcjonalności MVP (v1)
 * F01: Wprowadzanie danych przedmiotu
     * Użytkownik: Zalogowany sprzedawca.
@@ -98,7 +127,7 @@ Tworzy folder docs/ i dodaje plik roadmap-v1.md z sekcjami: 1. Cel i granice, 2.
     * Użytkownik: Zalogowany sprzedawca.
     * Oczekiwane działanie: Przeglądanie listy produktów w W01, filtrowanie ich po statusie oraz zmiana stanu przedmiotu (np. z Aktywny na Sprzedany).
     * Powiązane widoki: `W01`, `W03`.
-    * Potrzebne dane: Rekordy z tabeli `Produkt` powiązane z `kluczem uzytkownik_id`.
+    * Potrzebne dane: Rekordy z tabeli `Produkt` powiązane z kluczem `uzytkownik_id`.
     * Warunek poprawności: Prawidłowa zmiana pola `status` w bazie danych oraz natychmiastowa zmiana oznaczenia wizualnego na karcie przedmiotu w `W01`.
     * Sytuacja błędna: Próba edycji lub usunięcia przedmiotu należącego do innego użytkownika (brak uprawnień) – system zwraca błąd dostępu.
 
