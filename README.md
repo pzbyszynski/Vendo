@@ -43,21 +43,27 @@ Wszystkie kluczowe decyzje architektoniczne i zmiany w zakresie funkcjonalnym s�
 ## Uruchomienie lokalne aplikacji (Wersja v1)
 
 ### 1. Wymagania
-* Python 3.10 lub nowszy[cite: 9].
+* Python 3.10 lub nowszy [cite: 9].
 
-### 2. Instalacja i start (Windows PowerShell)[cite: 9]
+### 2. Instalacja i start (Windows PowerShell) [cite: 9]
 ```powershell
-# 1. Utwórz i aktywuj środowisko wirtualne
+
+# 1. Uruchom Windows PowerShell jako administrator i wpisz komendę Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Po wpisaniu zatwierdź zmianę, wpisując Y (lub T w polskiej wersji) i naciskając Enter. Następnie spróbuj ponownie aktywować środowisko:
+
+# 2. Wpisz komendę cd ... (Ścieżka do folderu z aplikacją Vendo-main) 
+
+# 3. Utwórz i aktywuj środowisko wirtualne
 py -3 -m venv .venv
 .\.venv\Scripts\activate
 
-# 2. Zainstaluj wymagane pakiety
+# 4. Zainstaluj wymagane pakiety
 pip install -r requirements.txt
 
-# 3. Zinicjalizuj bazę danych (tworzy użytkownika demo nr 1)
+# 5. Zinicjalizuj bazę danych (tworzy użytkownika demo nr 1)
 python init_db.py
 
-# 4. Uruchom serwer aplikacji
+# 6. Uruchom serwer aplikacji
 python app.py
 ```
 Aplikacja będzie dostępna pod adresem: http://127.0.0.1:5000 [cite: 9].
