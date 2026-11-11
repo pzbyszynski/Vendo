@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>W03: Edycja i zatwierdzenie produktu (F03 & F04)</h2>
+
+<div class="edit-container">
+    <div class="edit-preview">
+        <img src="{{ zdjecie.url_zdjecia if zdjecie else 'https://via.placeholder.com/150' }}" alt="Zdjęcie produktu">
+        <div class="ai-box">
+            <h4>Wygenerowane przez AI:</h4>
+            <p><strong>Tytuł AI:</strong> {{ produkt.ai_tytul }}</p>
+            <p><strong>Cena AI:</strong> {{ produkt.ai_cena }} PLN</p>
+        </div>
+    </div>
+
+    <form method="POST" class="form-box edit-form">
+        <div class="form-group">
+            <label for="ostateczny_tytul">Ostateczny Tytuł Ogłoszenia:</label>
+            <input type="text" id="ostateczny_tytul" name="ostateczny_tytul" value="{{ produkt.ostateczny_tytul }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ostatechna_cena">Ostateczna Cena (PLN):</label>
+            <input type="number" step="0.01" id="ostateczna_cena" name="ostateczna_cena" value="{{ produkt.ostateczna_cena }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="status">Status przedmiotu:</label>
+            <select id="status" name="status">
+                <option value="Szkic" {% if produkt.status == 'Szkic' %}selected{% endif %}>Szkic</option>
+                <option value="Aktywny" {% if produkt.status == 'Aktywny' %}selected{% endif %}>Aktywny (Wystawiony)</option>
+                <option value="Sprzedany" {% if produkt.status == 'Sprzedany' %}selected{% endif %}>Sprzedany</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ostateczny_opis">Ostateczny Opis Przedmiotu:</label>
+            <textarea id="ostateczny_opis" name="ostateczny_opis" rows="6" required>{{ produkt.ostateczny_opis }}</textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">💾 Zapisz zmiany w magazynie</button>
+        <a href="{{ url_for('w01_magazyn') }}" class="btn-secondary">Powrót</a>
+    </form>
+</div>
+
+<form method="POST" action="{{ url_for('usun_produkt', id=produkt.id) }}" class="delete-form" onsubmit="return confirm('Czy na pewno chcesz usunąć ten produkt?');">
+    <button type="submit" class="btn-danger">❌ Usuń produkt</button>
+</form>
+{% endblock %}

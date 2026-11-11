@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>W02: Generowanie oferty z AI (F01 & F02)</h2>
+
+<form method="POST" class="form-box">
+    <p class="form-help">Wprowadź słowo kluczowe, kod kreskowy lub wklej link do zdjęcia. AI przygotuje tytuł, opis oraz wycenę.</p>
+    
+    <div class="form-group">
+        <label for="slowo_kluczowe">Słowo kluczowe / Nazwa przedmiotu:</label>
+        <input type="text" id="slowo_kluczowe" name="slowo_kluczowe" placeholder="np. Bluza Adidas XL Vintage">
+    </div>
+
+    <div class="form-group">
+        <label for="kod_kreskowy">Kod kreskowy (EAN/UPC):</label>
+        <input type="text" id="kod_kreskowy" name="kod_kreskowy" placeholder="np. 5901234567890">
+    </div>
+
+    <div class="form-group">
+        <label for="url_zdjecia">URL Zdjęcia przedmiotu:</label>
+        <input type="url" id="url_zdjecia" name="url_zdjecia" placeholder="https://example.com/moje-zdjecie.jpg">
+    </div>
+
+    <button type="submit" class="btn-primary">✨ Generuj z AI</button>
+    <a href="{{ url_for('w01_magazyn') }}" class="btn-secondary">Anuluj</a>
+</form>
+{% endblock %}
