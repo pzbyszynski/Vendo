@@ -19,7 +19,7 @@
         </div>
 
         <div class="form-group">
-            <label for="ostatechna_cena">Ostateczna Cena (PLN):</label>
+            <label for="ostateczna_cena">Ostateczna Cena (PLN):</label>
             <input type="number" step="0.01" id="ostateczna_cena" name="ostateczna_cena" value="{{ produkt.ostateczna_cena }}" required>
         </div>
 
@@ -38,11 +38,11 @@
         </div>
 
         <button type="submit" class="btn-primary">💾 Zapisz zmiany w magazynie</button>
-        <a href="{{ url_for('w01_magazyn') }}" class="btn-secondary">Powrót</a>
+        <a href="{{ url_for('produkty.w01_magazyn') }}" class="btn-secondary">Powrót</a>
     </form>
 </div>
 
-<form method="POST" action="{{ url_for('usun_produkt', id=produkt.id) }}" class="delete-form" onsubmit="return confirm('Czy na pewno chcesz usunąć ten produkt?');">
+<form method="POST" action="{{ url_for('produkty.usun', id=produkt.id) }}" class="delete-form" onsubmit="return confirm('Czy na pewno chcesz usunąć ten produkt?');">
     <button type="submit" class="btn-danger">❌ Usuń produkt</button>
 </form>
 {% endblock %}
