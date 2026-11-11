@@ -54,12 +54,12 @@ Wszystkie kluczowe decyzje architektoniczne i zmiany w zakresie funkcjonalnym s�
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Po wpisaniu zatwierdź zmianę, wpisując Y (lub T w polskiej wersji) i naciskając Enter. Następnie spróbuj aktywować środowisko:
 
-# 2. Wpisz komendę
-cd ... (Ścieżka do folderu z aplikacją Vendo-main) 
-
-# 3. Utwórz i aktywuj środowisko wirtualne
+# 2. Utwórz i aktywuj środowisko wirtualne
 py -3 -m venv .venv
 .\.venv\Scripts\activate
+
+# 3. Wpisz komendę
+cd ... (Ścieżka do folderu z aplikacją Vendo-main) 
 
 # 4. Zainstaluj wymagane pakiety
 pip install -r requirements.txt
