@@ -4,10 +4,10 @@
 
 <div class="filter-bar">
     <span>Filtruj po statusie:</span>
-    <a href="{{ url_for('w01_magazyn', status='Wszystkie') }}" class="{% if wybrane_status == 'Wszystkie' %}active{% endif %}">Wszystkie</a>
-    <a href="{{ url_for('w01_magazyn', status='Szkic') }}" class="{% if wybrane_status == 'Szkic' %}active{% endif %}">Szkice</a>
-    <a href="{{ url_for('w01_magazyn', status='Aktywny') }}" class="{% if wybrane_status == 'Aktywny' %}active{% endif %}">Aktywne</a>
-    <a href="{{ url_for('w01_magazyn', status='Sprzedany') }}" class="{% if wybrane_status == 'Sprzedany' %}active{% endif %}">Sprzedane</a>
+    <a href="{{ url_for('produkty.w01_magazyn', status='Wszystkie') }}" class="{% if wybrane_status == 'Wszystkie' %}active{% endif %}">Wszystkie</a>
+    <a href="{{ url_for('produkty.w01_magazyn', status='Szkic') }}" class="{% if wybrane_status == 'Szkic' %}active{% endif %}">Szkice</a>
+    <a href="{{ url_for('produkty.w01_magazyn', status='Aktywny') }}" class="{% if wybrane_status == 'Aktywny' %}active{% endif %}">Aktywne</a>
+    <a href="{{ url_for('produkty.w01_magazyn', status='Sprzedany') }}" class="{% if wybrane_status == 'Sprzedany' %}active{% endif %}">Sprzedane</a>
 </div>
 
 {% if not produkty %}
@@ -22,7 +22,7 @@
                 <h3>{{ p.ostateczny_tytul }}</h3>
                 <p class="price">{{ "%.2f"|format(p.ostateczna_cena) }} PLN</p>
                 <div class="actions">
-                    <a href="{{ url_for('w03_edycja', id=p.id) }}" class="btn-sm">Edycja / Szczegóły</a>
+                    <a href="{{ url_for('produkty.w03_edycja', id=p.id) }}" class="btn-sm">Edycja / Szczegóły</a>
                 </div>
             </div>
         </div>
