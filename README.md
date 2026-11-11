@@ -60,4 +60,4 @@ python init_db.py
 # 4. Uruchom serwer aplikacji
 python app.py
 ```
-Aplikacja będzie dostępna pod adresem: http://127.0.0.1:5000[cite: 9].
+Aplikacja będzie dostępna pod adresem: http://127.0.0.1:5000 [cite: 9].
