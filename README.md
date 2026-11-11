@@ -3,6 +3,8 @@ Aplikacja, dzięki której użytkownik robi zdjęcie przedmiotu, który chce wys
 Wystarczy zrobić zdjęcie przedmiotu, zeskanować kod kreskowy lub wpisać słowo kluczowe, a AI wygeneruje tytuł, opis oraz sugerowaną cenę.
 Aplikacja sugeruje użytkownikowi cenę za wystawiany produkt, ale co do ceny - użytkownik wystawia ją ostatecznie samemu.
 Narzędzia do tworzenia etykiet wysyłkowych oraz organizowania odbiorów.
+## Wersja v1.0.0 (Architektura MVC)
+Projekt został w pełni zrefaktoryzowany do wzorca **MVC (Model-View-Controller)** przy użyciu technologii Python 3, Flask (Blueprints) oraz relacyjnej bazy SQLite[cite: 12, 13].
 # Zespół Vendo: 
 Członek 1: Paweł Zbyszyński, nr indeksu: 180651, grupa: IO2 , GitHub: @pzbyszynski   
 Członek 2: Maciej Wojciechowski, nr indeksu: 180647, grupa: IO2, GitHub: @ELLVO3
