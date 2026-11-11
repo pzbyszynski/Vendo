@@ -48,10 +48,12 @@ Wszystkie kluczowe decyzje architektoniczne i zmiany w zakresie funkcjonalnym s�
 ### 2. Instalacja i start (Windows PowerShell) [cite: 9]
 ```powershell
 
-# 1. Uruchom Windows PowerShell jako administrator i wpisz komendę Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-Po wpisaniu zatwierdź zmianę, wpisując Y (lub T w polskiej wersji) i naciskając Enter. Następnie spróbuj ponownie aktywować środowisko:
+# 1. Uruchom Windows PowerShell jako administrator i wpisz komendę
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Po wpisaniu zatwierdź zmianę, wpisując Y (lub T w polskiej wersji) i naciskając Enter. Następnie spróbuj aktywować środowisko:
 
-# 2. Wpisz komendę cd ... (Ścieżka do folderu z aplikacją Vendo-main) 
+# 2. Wpisz komendę
+cd ... (Ścieżka do folderu z aplikacją Vendo-main) 
 
 # 3. Utwórz i aktywuj środowisko wirtualne
 py -3 -m venv .venv
